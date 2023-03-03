@@ -5,8 +5,12 @@ from app.models import Category
 
 
 def home_view(request):
-    categories = Category.objects.all()
+    return render(request, "pages/index.html")
+
+
+def category_articles(request, category_slug):
+    category = Category.objects.filter(slug=category_slug).first()
     context = {
-        "categories": categories
+        "category": category
     }
-    return render(request, "pages/index.html", context)
+    return render(request, "pages/categories.html", context)
