@@ -12,8 +12,4 @@ def get_categories():
     return categories
 
 
-@register.simple_tag()
-def get_active_category(request, category):
-    slug_from_request = [item for item in request.path.split("/") if item][-1]
-    print(slug_from_request)
-    return "active" if slug_from_request == category.slug else ""
+
