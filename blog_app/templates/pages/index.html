@@ -7,4 +7,10 @@
 
 {% block body %}
 <h1>Главная страница</h1>
+
+<ul>
+    {% for category in categories %}
+    <li>{{ category }}</li>
+    {% endfor %}
+</ul>
 {% endblock body %}
