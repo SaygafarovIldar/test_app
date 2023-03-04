@@ -1,0 +1,28 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ post.image.url }}" class="img-fluid rounded-start h-100 w-100 object-fit-cover"
+                 alt="{{ post.title }}">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.content }}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item px-0">
+                        <i>Опубликовано в:</i> <b>{{ post.created_at.time }}</b>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <i>Обновлено в:</i> <b>{{ post.updated_at.time }}</b>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <i>Категория:</i> <a href="{{ post.category.get_absolute_url }}"><b>{{ post.category }}</b></a>
+                    </li>
+                    <li class="list-group-item px-0">
+                        <i>Автор:</i> <a href="#"><b>{{ post.author }}</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

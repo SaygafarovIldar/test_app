@@ -6,5 +6,9 @@
 
 
 {% block body %}
-<h1>Категория: {{ category }}</h1>
+<h3 class="text-center">Статьи категории: <i>{{ category }}</i></h3>
+<hr>
+
+{% include 'components/_post-row.html' %}
+
 {% endblock body %}
