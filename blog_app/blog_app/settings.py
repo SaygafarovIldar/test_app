@@ -133,3 +133,5 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+BOT_TOKEN = "5772974226:AAEFc36iWU2AP7izhCnB-nXEYQnBuink1vI"
