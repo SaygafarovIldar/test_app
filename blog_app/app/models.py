@@ -43,6 +43,9 @@ class Article(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
+    
+    def get_absolute_url(self):
+        return reverse('article_detail', kwargs={"article_slug": self.slug})
 
     class Meta:
         verbose_name = "Пост"

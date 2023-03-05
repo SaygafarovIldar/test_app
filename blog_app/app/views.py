@@ -21,3 +21,11 @@ def category_articles(request, category_slug):
         "articles": articles
     }
     return render(request, "pages/categories.html", context)
+
+
+def article_detail(request, article_slug):
+    article = Article.objects.filter(slug=article_slug).first()
+    context = {
+        "post": article
+    }
+    return render(request, "pages/detail.html", context)
