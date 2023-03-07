@@ -18,9 +18,11 @@
 <main>
     <div class="container">
         <div class="row">
+            {% block categories %}
             <div class="col-2">
                 {% include 'components/_categories.html' %}
             </div>
+            {% endblock categories %}
             <div class="col-10">
                 {% block body %}
                 {% endblock body %}

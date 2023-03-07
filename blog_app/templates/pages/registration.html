@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Авторизация
+{% endblock title %}
+
+
+{% block categories %}
+{% endblock categories %}
+
+{% block body %}
+<form>
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" aria-describedby="username" name="user_name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="username" name="email">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+    </div>
+    <div class="mb-3">
+        <label for="confirm_password" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirm_password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}
+
+

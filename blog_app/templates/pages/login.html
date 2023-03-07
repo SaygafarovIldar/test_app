@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Авторизация
+{% endblock title %}
+
+
+{% block categories %}
+{% endblock categories %}
+
+{% block body %}
+<form>
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock body %}
+
